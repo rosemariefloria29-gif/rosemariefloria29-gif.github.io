@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+  <title>Frank's Auto Repair Hub | Honest, Transparent &
+Digital-First Auto Care</title>
+  <meta name="description" content="Transparent, jargon-free auto
+repair and custom technical services in Bukeski. Upfront pricing, video
+diagnostics, and honest advice.">
+  <!-- Google Fonts -->
+  <link rel="preconnect"
+href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com"
+crossorigin>
+  <link
+href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Oswald:wght@600;700&family=Roboto:wght@400;500;700&display=swap"
+rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <span><i class="fa-solid
+fa-shield-halved"></i> <strong>Our
+Guarantee:</strong> No-Nonsense, Jargon-Free Diagnostics &
+Upfront Estimates.</span>
+      <span class="top-contact">
+        <i class="fa-solid fa-location-dot"></i>Sun Rise,
+Fourth Estate, Paranque |
+        <i class="fa-solid fa-phone"></i> Call/Text
+Directly
+      </span>
+    </div>
+  </div>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo">
+        <div class="logo-wrapper">
+          <svg viewBox="0 0 400 110" class="logo-svg">
+            <path d="M 80 42 C 120 20, 260 12, 312 40 L 315 48 C
+300 48, 290 40, 260 30 C 200 20, 130 25, 95 44 Z"
+fill="#ffffff"/>
+            <path d="M 158 26 C 180 18, 215 18, 222 28 C 210 28,
+190 28, 168 31 Z" fill="#ffffff"/>
+            <text x="200" y="58" text-anchor="middle"
+fill="#ffffff" font-family="'Montserrat', sans-serif" font-weight="700"
+font-size="16" letter-spacing="4">— FRANK'S —</text>
+            <text x="200" y="98" text-anchor="middle"
+fill="#ffffff" font-family="'Oswald', sans-serif" font-weight="800"
+font-size="38" letter-spacing="2">AUTO REPAIR HUB</text>
+          </svg>
+        </div>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link">About
+Us</a>
+        <a href="#trust" class="nav-link">Why Trust
+Us</a>
+        <a href="#services"
+class="nav-link">Services</a>
+        <a href="#inquiry" class="nav-link">Online
+Diagnostic</a>
+        <a href="#status" class="nav-link highlight">Track
+Repair Status</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="#inquiry" class="btn btn-primary"><i
+class="fa-solid fa-wrench"></i> Start Online
+Inquiry</a>
+        <button class="mobile-toggle" id="mobileToggle"
+aria-label="Toggle Navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero-section" id="about">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <div class="badge-trust"><i class="fa-solid
+fa-check-circle"></i> 8 Years of Honest Service
+</div>
+        <h1>Auto Repair Without the
+<span>Jargon</span> or Unexpected Bills.</h1>
+        <p class="hero-subtitle">
+          Get upfront quotes, plain-English video breakdowns of
+what’s wrong, and honest advice—even if that means telling you
+<em>not</em> to spend money on a repair.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#inquiry" class="btn btn-primary
+btn-lg"><i class="fa-solid fa-paper-plane"></i> Submit
+Guided Repair Request</a>
+          <a href="#status" class="btn btn-outline
+btn-lg"><i class="fa-solid fa-magnifying-glass"></i>
+Check Vehicle Status</a>
+        </div>
+        <div class="hero-proof">
+          <div class="proof-item">
+            <i class="fa-solid fa-video"></i>
+            <span>Video Inspection Included</span>
+          </div>
+          <div class="proof-item">
+            <i class="fa-solid fa-handshake"></i>
+            <span>"Should You Repair?" Advisor</span>
+          </div>
+          <div class="proof-item">
+            <i class="fa-solid fa-bolt"></i>
+            <span>AC & Mechanical
+Specialists</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="quick-quote-box">
+          <div class="box-header">
+            <h3><i class="fa-solid
+fa-calculator"></i> Quick Price & Feasibility
+Check</h3>
+            <p>Know what to expect before stepping into the
+shop.</p>
+          </div>
+          <form id="quickCheckForm"
+onsubmit="handleQuickCheck(event)">
+            <div class="form-group">
+              <label for="carModel">Vehicle Make / Model /
+Year</label>
+              <input type="text" id="carModel" placeholder="e.g.,
+2015 Toyota Vios / Sedan" required>
+            </div>
+            <div class="form-group">
+              <label for="primaryIssue">Primary
+Concern</label>
+              <select id="primaryIssue" required>
+                <option value="" disabled selected>Select issue
+category...</option>
+                <option value="ac">Air-Conditioning Not Cooling
+/ Strange Noise</option>
+                <option value="engine">Engine Warning Light /
+Rough Idle</option>
+                <option value="brakes">Brake Squeal / Soft
+Pedal</option>
+                <option value="suspension">Knocking Noise over
+Bumps</option>
+                <option value="custom">Custom Fabric / Auto
+Upholstery Work</option>
+                <option value="other">General Maintenance /
+Other</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-secondary
+btn-block">
+              Continue to Plain-English Diagnostic <i
+class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Key Brand Pillars Section -->
+  <section class="pillars-section" id="trust">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>The Frank's Repair Difference</h2>
+        <p>Traditional repair shops thrive on confusion. We
+thrive on total transparency.</p>
+      </div>
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fa-solid
+fa-comments"></i></div>
+          <h3>Accessible Communication</h3>
+          <p>No mechanic technical-jargon. We explain what
+failed, why it failed, and show you HD photos or short video clips
+before touching a bolt.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fa-solid
+fa-scale-balanced"></i></div>
+          <h3>Brutally Honest Guidance</h3>
+          <p>If fixing your car costs more than the car is
+worth, we will explicitly tell you to buy replacement instead of taking
+your hard-earned money.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fa-solid
+fa-receipt"></i></div>
+          <h3>Upfront Pricing & Verification</h3>
+          <p>Zero hidden fees or "surprise" shop supplies
+charges on your receipt. Every quote requires your digital sign-off
+before work starts.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon"><i class="fa-solid
+fa-screwdriver-wrench"></i></div>
+          <h3>8+ Years Hands-On Experience</h3>
+          <p>Founded by Mr. Frank with 14 specialized
+production/repair machines and military-grade discipline learned from
+hands-on mastery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Services Section -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Our Core Specialized Services</h2>
+        <p>From precision mechanical repairs to custom
+fabrications, we have you covered.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fa-solid fa-snowflake
+service-icon"></i>
+          <h3>Auto Air Conditioning</h3>
+          <p>Complete AC diagnostics, leak detection, freon
+recharge, compressor repair, and evaporator cleaning.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-engine
+service-icon"></i>
+          <h3>Engine Diagnostics & Repair</h3>
+          <p>Computer OBD-II scanning, tune-ups, overheating
+fixes, and general mechanical overhauls.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-car-burst
+service-icon"></i>
+          <h3>Brakes & Suspension</h3>
+          <p>Brake pad replacements, rotor resurfacing, shock
+absorber replacements, and underchassis noise isolation.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-solid fa-scissors
+service-icon"></i>
+          <h3>Custom Fabric & Upholstery</h3>
+          <p>Specialized interior upholstery, headliner
+restoration, seat cover customizations, and fabric repair.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Guided Step-by-Step Online Inquiry Journey -->
+  <section class="inquiry-section" id="inquiry">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Submit an Online Repair Inquiry</h2>
+        <p>Tell us what's happening. Our master technicians
+will review and send you a Plain-English diagnostic
+breakdown.</p>
+      </div>
+      <div class="wizard-container">
+        <!-- Progress Steps Bar -->
+        <div class="wizard-steps">
+          <div class="step active" data-step="1">
+            <span class="step-num">1</span>
+            <span class="step-label">Vehicle
+Info</span>
+          </div>
+          <div class="step" data-step="2">
+            <span class="step-num">2</span>
+            <span class="step-label">Describe
+Problem</span>
+          </div>
+          <div class="step" data-step="3">
+            <span class="step-num">3</span>
+            <span class="step-label">Upload
+Photo/Video</span>
+          </div>
+          <div class="step" data-step="4">
+            <span class="step-num">4</span>
+            <span class="step-label">Review &
+Submit</span>
+          </div>
+        </div>
+        <!-- Guided Form Box -->
+        <form id="inquiryWizardForm" class="wizard-form-box"
+onsubmit="return false;">
+          <!-- Step 1 Content -->
+          <div class="wizard-step-content active"
+id="wizardStep1">
+            <h3>Step 1: Vehicle & Contact
+Details</h3>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="ownerName">Your Full Name
+*</label>
+                <input type="text" id="ownerName"
+placeholder="e.g. Juan Cruz" required>
+              </div>
+              <div class="form-group">
+                <label for="ownerPhone">Mobile / WhatsApp /
+Viber Number *</label>
+                <input type="tel" id="ownerPhone"
+placeholder="0917-XXX-XXXX" required>
+              </div>
+            </div>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="vehicleMakeModel">Vehicle Make
+& Model *</label>
+                <input type="text" id="vehicleMakeModel"
+placeholder="e.g. 2017 Mitsubishi Montero / Honda Civic"
+required>
+              </div>
+              <div class="form-group">
+                <label for="plateNumber">Plate Number /
+Conduction Sticker (Optional for tracking)</label>
+                <input type="text" id="plateNumber"
+placeholder="e.g. ABC 1234">
+              </div>
+            </div>
+            <div class="step-buttons right">
+              <button type="button" class="btn btn-primary"
+onclick="nextWizardStep(2)">Next: Describe Problem <i
+class="fa-solid fa-chevron-right"></i></button>
+            </div>
+          </div>
+          <!-- Step 2 Content -->
+          <div class="wizard-step-content" id="wizardStep2"
+style="display:none;">
+            <h3>Step 2: What symptoms are you
+experiencing?</h3>
+            <p class="form-help-text">Select all symptoms that
+apply or describe it in your own words.</p>
+            <div class="symptom-tags">
+              <label class="tag-chip"><input type="checkbox"
+name="symptoms" value="No Air Conditioning / Warm Air">
+<span><i class="fa-solid fa-snowflake"></i> AC Blows
+Warm Air</span></label>
+              <label class="tag-chip"><input type="checkbox"
+name="symptoms" value="Squeaking / Grinding Brakes">
+<span><i class="fa-solid fa-compact-disc"></i>
+Grinding / Squeaking Brakes</span></label>
+              <label class="tag-chip"><input type="checkbox"
+name="symptoms" value="Engine Overheating"> <span><i
+class="fa-solid fa-temperature-high"></i> Engine Temperature
+High</span></label>
+              <label class="tag-chip"><input type="checkbox"
+name="symptoms" value="Check Engine Light On"> <span><i
+class="fa-solid fa-triangle-exclamation"></i> Check Engine
+Light</span></label>
+              <label class="tag-chip"><input type="checkbox"
+name="symptoms" value="Clunking Noise Under Car"> <span><i
+class="fa-solid fa-volume-high"></i> Knocking / Clunking
+Sounds</span></label>
+              <label class="tag-chip"><input type="checkbox"
+name="symptoms" value="Custom Fabric Upholstery Needed">
+<span><i class="fa-solid fa-scissors"></i> Seat Fabric
+/ Trim Repair</span></label>
+            </div>
+            <div class="form-group">
+              <label for="problemDescription">Describe the
+issue in plain terms *</label>
+              <textarea id="problemDescription" rows="4"
+placeholder="e.g. Whenever I turn on the AC while stuck in traffic, I
+hear a clicking sound and the air turns warm after 5 minutes..."
+required></textarea>
+            </div>
+            <div class="step-buttons">
+              <button type="button" class="btn btn-outline"
+onclick="nextWizardStep(1)"><i class="fa-solid
+fa-chevron-left"></i> Back</button>
+              <button type="button" class="btn btn-primary"
+onclick="nextWizardStep(3)">Next: Upload Photo or Video <i
+class="fa-solid fa-chevron-right"></i></button>
+            </div>
+          </div>
+          <!-- Step 3 Content -->
+          <div class="wizard-step-content" id="wizardStep3"
+style="display:none;">
+            <h3>Step 3: Visual Inspection Media (Optional but
+Recommended)</h3>
+            <p class="form-help-text">Uploading a 10-second
+video of the sound or a photo of the leaking area helps us give you a
+95% accurate estimate immediately.</p>
+            <div class="file-upload-zone" id="dropZone">
+              <i class="fa-solid fa-cloud-arrow-up
+upload-icon"></i>
+              <p>Drag & Drop short video, dashboard photo,
+or fluid leak image here</p>
+              <span>or</span>
+              <br>
+              <label for="mediaUpload" class="btn btn-outline
+btn-sm">Browse Device Files</label>
+              <input type="file" id="mediaUpload"
+accept="image/*,video/*" multiple class="hidden-file-input">
+              <div id="filePreviewList"
+class="file-preview-list"></div>
+            </div>
+            <div class="step-buttons">
+              <button type="button" class="btn btn-outline"
+onclick="nextWizardStep(2)"><i class="fa-solid
+fa-chevron-left"></i> Back</button>
+              <button type="button" class="btn btn-primary"
+onclick="nextWizardStep(4)">Next: Final Review <i class="fa-solid
+fa-chevron-right"></i></button>
+            </div>
+          </div>
+          <!-- Step 4 Content -->
+          <div class="wizard-step-content" id="wizardStep4"
+style="display:none;">
+            <h3>Step 4: Confirm & Receive
+Ticket</h3>
+            <div class="summary-box">
+              <h4>Inquiry Summary:</h4>
+              <p><strong>Customer:</strong>
+<span id="summaryName">--</span> (<span
+id="summaryPhone">--</span>)</p>
+              <p><strong>Vehicle:</strong> <span
+id="summaryVehicle">--</span></p>
+              <p><strong>Symptoms:</strong>
+<span id="summarySymptoms">--</span></p>
+              <div class="guarantee-badge-inline">
+                <i class="fa-solid fa-shield-check"></i>
+Free Preliminary Assessment. No obligation to proceed with repair.
+              </div>
+            </div>
+            <div class="step-buttons">
+              <button type="button" class="btn btn-outline"
+onclick="nextWizardStep(3)"><i class="fa-solid
+fa-chevron-left"></i> Back</button>
+              <button type="button" class="btn btn-secondary
+btn-lg" onclick="submitInquiry()"><i class="fa-solid
+fa-check"></i> Send Inquiry to Mr. Frank</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- Track Repair Status Section -->
+  <section class="status-section" id="status">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2><i class="fa-solid
+fa-magnifying-glass"></i> Track Your Vehicle Repair
+Status</h2>
+        <p>Enter your Ticket ID or Plate Number below to view
+live diagnostic video logs and progress updates.</p>
+      </div>
+      <div class="status-box">
+        <form id="trackStatusForm"
+onsubmit="trackRepairStatus(event)" class="form-grid-2">
+          <div class="form-group">
+            <label for="trackInput">Ticket Reference Code or
+Plate Number</label>
+            <input type="text" id="trackInput" placeholder="e.g.
+TICKET-1042 or ABC 1234" required>
+          </div>
+          <div class="form-group align-end">
+            <button type="submit" class="btn btn-primary
+btn-block"><i class="fa-solid fa-search"></i> Check
+Status</button>
+          </div>
+        </form>
+        <div id="statusResult" class="status-result-container"
+style="display: none; margin-top: 20px;">
+          <div class="status-card">
+            <h4><i class="fa-solid fa-wrench"></i>
+Status Report: <span
+id="resTicket">TICKET-1042</span></h4>
+            <p><strong>Vehicle:</strong> <span
+id="resVehicle">Toyota Vios (ABC 1234)</span></p>
+            <p><strong>Current Phase:</strong>
+<span class="badge-status-in-progress" id="resStatus">In
+Diagnostics / Video Uploaded</span></p>
+            <p id="resDetails">Our technician is recording the
+video breakdown of your AC compressor inspection. You will receive an
+SMS notification once the video quote is ready for your
+sign-off.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Frank's Auto Repair Hub. All rights
+reserved.</p>
+      <p><i class="fa-solid fa-location-dot"></i>
+Sun Rise, Fourth Estate, Paranque  </p>
+    </div>
+  </footer>
+  <!-- JavaScript Functions Needed for Interactivity -->
+  <script>
+    // Mobile navigation toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (mobileToggle) {
+      mobileToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    }
+    // Smooth navigation section scrolling
+    function scrollToSection(id) {
+      const target = document.getElementById(id);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    // Handle Hero Quick Check Form Submission
+    function handleQuickCheck(e) {
+      e.preventDefault();
+      const carModel = document.getElementById('carModel').value;
+      const primaryIssue =
+document.getElementById('primaryIssue').value;
+      if (carModel) {
+        document.getElementById('vehicleMakeModel').value =
+carModel;
+      }
+      scrollToSection('inquiry');
+      nextWizardStep(2);
+    }
+    // Step Wizard navigation logic
+    function nextWizardStep(stepNumber) {
+      // Validate inputs before moving forward
+      if (stepNumber === 2) {
+        const name =
+document.getElementById('ownerName').value.trim();
+        const phone =
+document.getElementById('ownerPhone').value.trim();
+        const vehicle =
+document.getElementById('vehicleMakeModel').value.trim();
+        if (!name || !phone || !vehicle) {
+          alert('Please fill in your Name, Phone Number, and Vehicle
+Model before proceeding.');
+          return;
+        }
+      }
+      if (stepNumber === 3) {
+        const desc =
+document.getElementById('problemDescription').value.trim();
+        if (!desc) {
+          alert('Please provide a brief description of the
+problem.');
+          return;
+        }
+      }
+      if (stepNumber === 4) {
+        updateSummary();
+      }
+      // Toggle form step visibility
+      const steps =
+document.querySelectorAll('.wizard-step-content');
+      steps.forEach(step => step.style.display = 'none');
+      const targetStep = document.getElementById('wizardStep' +
+stepNumber);
+      if (targetStep) {
+        targetStep.style.display = 'block';
+      }
+      // Update Top Step Indicator styling
+      const stepIndicators = document.querySelectorAll('.wizard-steps
+.step');
+      stepIndicators.forEach((indicator, idx) => {
+        if (idx + 1 === stepNumber) {
+          indicator.classList.add('active');
+        } else {
+          indicator.classList.remove('active');
+        }
+      });
+    }
+    // Populate data for step 4 summary preview
+    function updateSummary() {
+      const name = document.getElementById('ownerName').value ||
+'--';
+      const phone = document.getElementById('ownerPhone').value ||
+'--';
+      const vehicle =
+document.getElementById('vehicleMakeModel').value || '--';
+      const selectedSymptoms =
+Array.from(document.querySelectorAll('input[name="symptoms"]:checked'))
+                                   .map(cb => cb.value);
+      const desc =
+document.getElementById('problemDescription').value;
+      let symptomsText = selectedSymptoms.join(', ');
+      if (desc) {
+        symptomsText += (symptomsText ? ' | Note: ' : '') + desc;
+      }
+      document.getElementById('summaryName').textContent = name;
+      document.getElementById('summaryPhone').textContent =
+phone;
+      document.getElementById('summaryVehicle').textContent =
+vehicle;
+      document.getElementById('summarySymptoms').textContent =
+symptomsText || 'None specified';
+    }
+    // Process Final Form Submission
+    function submitInquiry() {
+      const randomTicket = 'TICKET-' + Math.floor(1000 +
+Math.random() * 9000);
+      alert(`Thank you! Your inquiry has been sent directly to Mr.
+Frank.\nYour Tracking Ticket Code is: ${randomTicket}`);
+      // Reset form and reset to step 1
+      document.getElementById('inquiryWizardForm').reset();
+      document.getElementById('filePreviewList').innerHTML = '';
+      nextWizardStep(1);
+      // Auto fill track field for testing convenience
+      document.getElementById('trackInput').value = randomTicket;
+      scrollToSection('status');
+    }
+    // Track Status handler
+    function trackRepairStatus(event) {
+      event.preventDefault();
+      const inputVal =
+document.getElementById('trackInput').value.trim();
+      const resultBox = document.getElementById('statusResult');
+      if (!inputVal) return;
+      document.getElementById('resTicket').textContent =
+inputVal.toUpperCase();
+      resultBox.style.display = 'block';
+    }
+    // Simple File Upload Preview Handler
+    const mediaUpload = document.getElementById('mediaUpload');
+    const filePreviewList =
+document.getElementById('filePreviewList');
+    if (mediaUpload) {
+      mediaUpload.addEventListener('change', function() {
+        filePreviewList.innerHTML = '';
+        Array.from(this.files).forEach(file => {
+          const item = document.createElement('div');
+          item.className = 'preview-item';
+          item.innerHTML = `<i class="fa-solid
+fa-file"></i> ${file.name}`;
+          filePreviewList.appendChild(item);
+        });
+      });
+    }
+  </script>
+</body>
+</html>

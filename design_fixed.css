@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>in</title>
+  <style>
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+background-color: #1a1a1a;
+border: none;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+</head>
+<body>
+<p>/*
+==========================================================================</p>
+<p>   FRANK&#39;S AUTO REPAIR HUB - CORE STYLESHEET (design.css)</p>
+<p> 
+ ==========================================================================
+*/</p>
+<p>/*
+--------------------------------------------------------------------------</p>
+<p>   1. Design System &amp; Variables</p>
+<p> 
+ --------------------------------------------------------------------------
+*/</p>
+<p>:root {</p>
+<p>  --primary-color: #0f172a;       /* Deep Navy / Slate */</p>
+<p>  --secondary-color: #2563eb;     /* Electric Blue */</p>
+<p>  --accent-color: #f59e0b;        /* Amber / Warning Gold */</p>
+<p>  --success-color: #10b981;       /* Emerald Green */</p>
+<p>  --bg-light: #f8fafc;            /* Light Gray Background */</p>
+<p>  --bg-card: #ffffff;             /* Pure White */</p>
+<p>  --text-main: #1e293b;           /* Dark Slate Text */</p>
+<p>  --text-muted: #64748b;          /* Cool Gray Text */</p>
+<p>  --border-color: #e2e8f0;        /* Light Border */</p>
+<p>  --radius-sm: 6px;</p>
+<p>  --radius-md: 10px;</p>
+<p>  --radius-lg: 16px;</p>
+<p>  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);</p>
+<p>  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px
+rgba(0,0,0,0.06);</p>
+<p>  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px
+rgba(0,0,0,0.05);</p>
+<p>  --transition: all 0.3s ease;</p>
+<p>}</p>
+<p>/*
+--------------------------------------------------------------------------</p>
+<p>   2. Reset &amp; Base Layout</p>
+<p> 
+ --------------------------------------------------------------------------
+*/</p>
+<p>* {</p>
+<p>  margin: 0;</p>
+<p>  padding: 0;</p>
+<p>  box-sizing: border-box;</p>
+<p>}</p>
+<p>html {</p>
+<p>  scroll-behavior: smooth;</p>
+<p>  font-family: &#39;Segoe UI&#39;, system-ui, -apple-system,
+BlinkMacSystemFont, Roboto, sans-serif;</p>
+<p>  color: var(--text-main);</p>
+<p>  background-color: var(--bg-light);</p>
+<p>  line-height: 1.6;</p>
+<p>}</p>
+<p>.container {</p>
+<p>  width: 100%;</p>
+<p>  max-width: 1200px;</p>
+<p>  margin: 0 auto;</p>
+<p>  padding: 0 1.5rem;</p>
+<p>}</p>
+<p>/*
+--------------------------------------------------------------------------</p>
+<p>   3. Top Announcement Bar</p>
+<p> 
+ --------------------------------------------------------------------------
+*/</p>
+<p>.top-bar {</p>
+<p>  background-color: var(--primary-color);</p>
+<p>  color: #94a3b8;</p>
+<p>  font-size: 0.85rem;</p>
+<p>  padding: 0.5rem 0;</p>
+<p>  border-bottom: 1px solid rgba(255, 255, 255, 0.1);</p>
+<p>}</p>
+<p>.top-bar-content {</p>
+<p>  display: flex;</p>
+<p>  justify-content: space-between;</p>
+<p>  align-items: center;</p>
+<p>  flex-wrap: wrap;</p>
+<p>  gap: 0.5rem;</p>
+<p>}</p>
+<p>.top-bar strong {</p>
+<p>  color: #fff;</p>
+<p>}</p>
+<p>.top-bar i {</p>
+<p>  color: var(--secondary-color);</p>
+<p>  margin-right: 0.3rem;</p>
+<p>}</p>
+<p>/*
+--------------------------------------------------------------------------</p>
+<p>   4. Navigation Bar</p>
+<p> 
+ --------------------------------------------------------------------------
+*/</p>
+<p>.navbar {</p>
+<p>  background-color: var(--primary-color);</p>
+<p>  position: sticky;</p>
+<p>  top: 0;</p>
+<p>  z-index: 1000;</p>
+<p>  box-shadow: var(--shadow-md);</p>
+<p>}</p>
+<p>.nav-container {</p>
+<p>  display: flex;</p>
+<p>  justify-content: space-between;</p>
+<p>  align-items: center;</p>
+<p>  padding: 0.75rem 1.5rem;</p>
+<p>}</p>
+<p>.logo-svg {</p>
+<p>  height: 50px;</p>
+<p>  width: auto;</p>
+<p>}</p>
+<p>.nav-links {</p>
+<p>  display: flex;</p>
+<p>  gap: 1.5rem;</p>
+<p>  align-items: center;</p>
+<p>}</p>
+<p>.nav-link {</p>
+<p>  color: #cbd5e1;</p>
+<p>  text-decoration: none;</p>
+<p>  font-weight: 500;</p>
+<p>  font-size: 0.95rem;</p>
+<p>  transition: var(--transition);</p>
+<p>}</p>
+<p>.nav-link:hover {</p>
+<p>  color: #ffffff;</p>
+<p>}</p>
+<p>.nav-link.highlight {</p>
+<p>  color: var(--accent-color);</p>
+<p>  font-weight: 600;</p>
+<p>}</p>
+<p>.nav-actions {</p>
+<p>  display: flex;</p>
+<p>  align-items: center;</p>
+<p>  gap: 1rem;</p>
+<p>}</p>
+<p>.mobile-toggle {</p>
+<p>  display: none;</p>
+<p>  background: none;</p>
+<p>  border: none;</p>
+<p>  color: #ffffff;</p>
+<p>  font-size: 1.5rem;</p>
+<p>  cursor: pointer;</p>
+<p>}</p>
+<p>/*
+--------------------------------------------------------------------------</p>
+<p>   5. Buttons &amp; Badges</p>
+<p> 
+ --------------------------------------------------------------------------
+*/</p>
+<p>.btn {</p>
+<p>  display: inline-flex;</p>
+<p>  align-items: center;</p>
+<p>  justify-content: center;</p>
+<p>  gap: 0.5rem;</p>
+<p>  padding: 0.625rem 1.25rem;</p>
+<p>  font-weight: 600;</p>
+<p>  border-radius: var(--radius-sm);</p>
+<p>  text-decoration: none;</p>
+<p>  border: 2px solid transparent;</p>
+<p>  cursor: pointer;</p>
+<p>  transition: var(--transition);</p>
+<p>  font-size: 0.95rem;</p>
+<p>}</p>
+<p>.btn-primary {</p>
+<p>  background-color: var(--secondary-color);</p>
+<p>  color: #ffffff;</p>
+<p>}</p>
+<p>.btn-primary:hover {</p>
+<p>  background-color: #1d4ed8;</p>
+<p>}</p>
+<p>.btn-secondary {</p>
+<p>  background-color: var(--accent-color);</p>
+<p>  color: var(--primary-color);</p>
+<p>}</p>
+<p>.btn-secondary:hover {</p>
+<p>  background-color: #d97706;</p>
+<p>  color: #ffffff;</p>
+<p>}</p>
+<p>.btn-outline {</p>
+<p>  border-color: #cbd5e1;</p>
+<p>  color: var(--text-main);</p>
+<p>  background: transparent;</p>
+<p>}</p>
+<p>.btn-outline:hover {</p>
+<p>  background-color: var(--border-color);</p>
+<p>}</p>
+<p>.btn-block {</p>
+<p>  width: 100%;</p>
+<p>}</p>
+<p>.btn-lg {</p>
+<p>  padding: 0.85rem 1.75rem;</p>
+<p>  font-size: 1.05rem;</p>
+<p>}</p>
+<p>.btn-sm {</p>
+<p>  padding: 0.4rem 0.8rem;</p>
+<p>  font-size: 0.85rem;</p>
+<p>}</p>
+<p>/*
+--------------------------------------------------------------------------</p>
+<p>   6. Hero Section</p>
+<p> 
+ --------------------------------------------------------------------------
+*/</p>
+<p>.hero-section {</p>
+<p>  padding: 4rem 0;</p>
+<p>  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);</p>
+<p>  color: #ffffff;</p>
+<p>}</p>
+<p>.hero-grid {</p>
+<p>  display: grid;</p>
+<p>  grid-template-columns: 1.2fr 0.8fr;</p>
+<p>  gap: 3rem;</p>
+<p>  align-items: center;</p>
+<p>}</p>
+<p>.badge-trust {</p>
+<p>  display: inline-flex;</p>
+<p>  align-items: center;</p>
+<p>  gap: 0.5rem;</p>
+<p>  background-color: rgba(37, 99, 235, 0.2);</p>
+<p>  color: #60a5fa;</p>
+<p>  padding: 0.4rem 0.8rem;</p>
+<p>  border-radius: 20px;</p>
+<p>  font-size: 0.85rem;</p>
+<p>  font-weight: 600;</p>
+<p>  margin-bottom: 1rem;</p>
+<p>}</p>
+<p>.hero-text h1 {</p>
+<p>  font-size: 2.75rem;</p>
+<p>  line-height: 1.2;</p>
+<p>  margin-bottom: 1.25rem;</p>
+<p>}</p>
+<p>.hero-text h1 span {</p>
+<p>  color: var(--accent-color);</p>
+<p>}</p>
+<p>.hero-subtitle {</p>
+<p>  font-size: 1.1rem;</p>
+<p>  color: #94a3b8;</p>
+<p>  margin-bottom: 2rem;</p>
+<p>}</p>
+<p>.hero-cta-group {</p>
+<p>  display: flex;</p>
+<p>  gap: 1rem;</p>
+<p>  margin-bottom: 2.5rem;</p>
+<p>}</p>
+<p>.hero-proof {</p>
+<p>  display: flex;</p>
+<p>  gap: 1.5rem;</p>
+<p>  border-top: 1px solid rgba(255, 255, 255, 0.1);</p>
+<p>  padding-top: 1.5rem;</p>
+<p>}</p>
+<p>.proof-item {</p>
+<p>  display: flex;</p>
+<p>  align-items: center;</p>
+<p>  gap: 0.5rem;</p>
+<p>  font-size: 0.85rem;</p>
+<p>  color: #cbd5e1;</p>
+<p>}</p>
+<p>.proof-item i {</p>
+<p>  color: var(--success-color);</p>
+<p>}</p>
+<p>/* Hero Quick Check Card */</p>
+<p>.quick-quote-box {</p>
+<p>  background-color: var(--bg-card);</p>
+<p>  padding: 2rem;</p>
+<p>  border-radius: var(--radius-lg);</p>
+<p>  box-shadow: var(--shadow-lg);</p>
+<p>  color: var(--text-main);</p>
+<p>}</p>
+<p>.box-header h3 {</p>
+<p>  font-size: 1.25rem;</p>
+<p>  margin-bottom: 0.25rem;</p>
+<p>}</p>
+<p>.box-header p {</p>
+<p>  color: var(--text-muted);</p>
+<p>  font-size: 0.875rem;</p>
+<p>  margin-bottom: 1.5rem;</p>
+<p>}</p>
+<p>/*
+--------------------------------------------------------------------------</p>
+<p>   7. Form Controls &amp; Styling</p>
+<p> 
+ --------------------------------------------------------------------------
+*/</p>
+<p>.form-group {</p>
+<p>  margin-bottom: 1.25rem;</p>
+<p>}</p>
+<p>.form-group label {</p>
+<p>  display: block;</p>
+<p>  font-size: 0.875rem;</p>
+<p>  font-weight: 600;</p>
+<p>  margin-bottom: 0.4rem;</p>
+<p>}</p>
+<p>.form-group input,</p>
+<p>.form-group select,</p>
+<p>.form-group textarea {</p>
+<p>  width: 100%;</p>
+<p>  padding: 0.75rem;</p>
+<p>  border: 1px solid var(--border-color);</p>
+<p>  border-radius: var(--radius-sm);</p>
+<p>  font-family: inherit;</p>
+<p>  font-size: 0.95rem;</p>
+<p>  transition: var(--transition);</p>
+<p>}</p>
+<p>.form-group input:focus,</p>
+<p>.form-group select:focus,</p>
+<p>.form-group textarea:focus {</p>
+<p>  outline: none;</p>
+<p>  border-color: var(--secondary-color);</p>
+<p>  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);</p>
+<p>}</p>
+<p>/*
+--------------------------------------------------------------------------</p>
+<p>   8. Section Common Styling &amp; Brand Pillars</p>
+<p> 
+ --------------------------------------------------------------------------
+*/</p>
+<p>.pillars-section, .inquiry-section {</p>
+<p>  padding: 5rem 0;</p>
+<p>}</p>
+<p>.section-title {</p>
+<p>  margin-bottom: 3rem;</p>
+<p>}</p>
+<p>.section-title.text-center {</p>
+<p>  text-align: center;</p>
+<p>}</p>
+<p>.section-title h2 {</p>
+<p>  font-size: 2rem;</p>
+<p>  color: var(--primary-color);</p>
+<p>  margin-bottom: 0.5rem;</p>
+<p>}</p>
+<p>.section-title p {</p>
+<p>  color: var(--text-muted);</p>
+<p>}</p>
+<p>.pillars-grid {</p>
+<p>  display: grid;</p>
+<p>  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));</p>
+<p>  gap: 1.5rem;</p>
+<p>}</p>
+<p>.pillar-card {</p>
+<p>  background-color: var(--bg-card);</p>
+<p>  padding: 2rem;</p>
+<p>  border-radius: var(--radius-md);</p>
+<p>  border: 1px solid var(--border-color);</p>
+<p>  box-shadow: var(--shadow-sm);</p>
+<p>  transition: var(--transition);</p>
+<p>}</p>
+<p>.pillar-card:hover {</p>
+<p>  transform: translateY(-4px);</p>
+<p>  box-shadow: var(--shadow-md);</p>
+<p>}</p>
+<p>.pillar-icon {</p>
+<p>  width: 50px;</p>
+<p>  height: 50px;</p>
+<p>  background-color: rgba(37, 99, 235, 0.1);</p>
+<p>  color: var(--secondary-color);</p>
+<p>  display: flex;</p>
+<p>  align-items: center;</p>
+<p>  justify-content: center;</p>
+<p>  border-radius: var(--radius-sm);</p>
+<p>  font-size: 1.25rem;</p>
+<p>  margin-bottom: 1rem;</p>
+<p>}</p>
+<p>/*
+--------------------------------------------------------------------------</p>
+<p>   9. Guided Wizard Form</p>
+<p> 
+ --------------------------------------------------------------------------
+*/</p>
+<p>.wizard-container {</p>
+<p>  background-color: var(--bg-card);</p>
+<p>  border-radius: var(--radius-lg);</p>
+<p>  box-shadow: var(--shadow-md);</p>
+<p>  border: 1px solid var(--border-color);</p>
+<p>  overflow: hidden;</p>
+<p>}</p>
+<p>.wizard-steps {</p>
+<p>  display: flex;</p>
+<p>  background-color: var(--bg-light);</p>
+<p>  border-bottom: 1px solid var(--border-color);</p>
+<p>}</p>
+<p>.step {</p>
+<p>  flex: 1;</p>
+<p>  display: flex;</p>
+<p>  align-items: center;</p>
+<p>  justify-content: center;</p>
+<p>  gap: 0.5rem;</p>
+<p>  padding: 1rem;</p>
+<p>  color: var(--text-muted);</p>
+<p>  font-size: 0.875rem;</p>
+<p>  font-weight: 600;</p>
+<p>  border-bottom: 3px solid transparent;</p>
+<p>}</p>
+<p>.step.active {</p>
+<p>  color: var(--secondary-color);</p>
+<p>  border-bottom-color: var(--secondary-color);</p>
+<p>  background-color: #ffffff;</p>
+<p>}</p>
+<p>.step-num {</p>
+<p>  width: 24px;</p>
+<p>  height: 24px;</p>
+<p>  border-radius: 50%;</p>
+<p>  background-color: var(--border-color);</p>
+<p>  color: var(--text-muted);</p>
+<p>  display: flex;</p>
+<p>  align-items: center;</p>
+<p>  justify-content: center;</p>
+<p>  font-size: 0.75rem;</p>
+<p>}</p>
+<p>.step.active .step-num {</p>
+<p>  background-color: var(--secondary-color);</p>
+<p>  color: #ffffff;</p>
+<p>}</p>
+<p>.wizard-form-box {</p>
+<p>  padding: 2.5rem;</p>
+<p>}</p>
+<p>.wizard-step-content {</p>
+<p>  display: none;</p>
+<p>}</p>
+<p>.wizard-step-content.active {</p>
+<p>  display: block;</p>
+<p>}</p>
+<p>.form-grid-2 {</p>
+<p>  display: grid;</p>
+<p>  grid-template-columns: 1fr 1fr;</p>
+<p>  gap: 1rem;</p>
+<p>}</p>
+<p>.form-help-text {</p>
+<p>  font-size: 0.875rem;</p>
+<p>  color: var(--text-muted);</p>
+<p>  margin-bottom: 1.25rem;</p>
+<p>}</p>
+<p>/* Symptom Checkbox Chips */</p>
+<p>.symptom-tags {</p>
+<p>  display: flex;</p>
+<p>  flex-wrap: wrap;</p>
+<p>  gap: 0.75rem;</p>
+<p>  margin-bottom: 1.5rem;</p>
+<p>}</p>
+<p>.tag-chip input[type=&quot;checkbox&quot;] {</p>
+<p>  display: none;</p>
+<p>}</p>
+<p>.tag-chip span {</p>
+<p>  display: inline-flex;</p>
+<p>  align-items: center;</p>
+<p>  gap: 0.4rem;</p>
+<p>  padding: 0.5rem 1rem;</p>
+<p>  background-color: var(--bg-light);</p>
+<p>  border: 1px solid var(--border-color);</p>
+<p>  border-radius: 20px;</p>
+<p>  font-size: 0.85rem;</p>
+<p>  cursor: pointer;</p>
+<p>  transition: var(--transition);</p>
+<p>}</p>
+<p>.tag-chip input:checked + span {</p>
+<p>  background-color: rgba(37, 99, 235, 0.1);</p>
+<p>  border-color: var(--secondary-color);</p>
+<p>  color: var(--secondary-color);</p>
+<p>  font-weight: 600;</p>
+<p>}</p>
+<p>/* File Drop Zone */</p>
+<p>.file-upload-zone {</p>
+<p>  border: 2px dashed var(--border-color);</p>
+<p>  border-radius: var(--radius-md);</p>
+<p>  padding: 2.5rem;</p>
+<p>  text-align: center;</p>
+<p>  background-color: var(--bg-light);</p>
+<p>  margin-bottom: 1.5rem;</p>
+<p>}</p>
+<p>.upload-icon {</p>
+<p>  font-size: 2.5rem;</p>
+<p>  color: var(--text-muted);</p>
+<p>  margin-bottom: 0.5rem;</p>
+<p>}</p>
+<p>.hidden-file-input {</p>
+<p>  display: none;</p>
+<p>}</p>
+<p>/* Step Navigation Buttons */</p>
+<p>.step-buttons {</p>
+<p>  display: flex;</p>
+<p>  justify-content: space-between;</p>
+<p>  margin-top: 2rem;</p>
+<p>  padding-top: 1rem;</p>
+<p>  border-top: 1px solid var(--border-color);</p>
+<p>}</p>
+<p>.step-buttons.right {</p>
+<p>  justify-content: flex-end;</p>
+<p>}</p>
+<p>/* Summary Box */</p>
+<p>.summary-box {</p>
+<p>  background-color: var(--bg-light);</p>
+<p>  padding: 1.5rem;</p>
+<p>  border-radius: var(--radius-md);</p>
+<p>  margin-bottom: 1.5rem;</p>
+<p>}</p>
+<p>.summary-box h4 {</p>
+<p>  margin-bottom: 0.75rem;</p>
+<p>}</p>
+<p>.guarantee-badge-inline {</p>
+<p>  margin-top: 1rem;</p>
+<p>  color: var(--success-color);</p>
+<p>  font-size: 0.875rem;</p>
+<p>  font-weight: 600;</p>
+<p>}</p>
+<p>/*
+--------------------------------------------------------------------------</p>
+<p>   10. Mobile Responsiveness</p>
+<p> 
+ --------------------------------------------------------------------------
+*/</p>
+<p>@media (max-width: 992px) {</p>
+<p>  .hero-grid {</p>
+<p>    grid-template-columns: 1fr;</p>
+<p>  }</p>
+<p>}</p>
+<p>@media (max-width: 768px) {</p>
+<p>  .nav-links {</p>
+<p>    display: none; /* Can be toggled via JS */</p>
+<p>  }</p>
+<p>  .mobile-toggle {</p>
+<p>    display: block;</p>
+<p>  }</p>
+<p>  .top-bar-content {</p>
+<p>    flex-direction: column;</p>
+<p>    text-align: center;</p>
+<p>  }</p>
+<p>  .form-grid-2 {</p>
+<p>    grid-template-columns: 1fr;</p>
+<p>  }</p>
+<p>  .wizard-steps {</p>
+<p>    flex-wrap: wrap;</p>
+<p>  }</p>
+<p>  .step-label {</p>
+<p>    display: none;</p>
+<p>  }</p>
+<p>}</p>
+</body>
+</html>
+/* ==========================================================================
+   11. Services Section
+   ========================================================================== */
+
+.services-section {
+  padding: 5rem 0;
+  background-color: #ffffff;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.service-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(37, 99, 235, 0.35);
+}
+
+.service-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+  border-radius: var(--radius-sm);
+  background-color: rgba(37, 99, 235, 0.1);
+  color: var(--secondary-color);
+  font-size: 1.25rem;
+}
+
+.service-card h3 {
+  color: var(--primary-color);
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   12. Inquiry Section
+   ========================================================================== */
+
+.inquiry-section {
+  background-color: var(--bg-light);
+}
+
+.wizard-form-box h3 {
+  color: var(--primary-color);
+  margin-bottom: 1.25rem;
+}
+
+.align-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.file-preview-list {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.preview-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 0.8rem;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-main);
+  font-size: 0.85rem;
+}
+
+.preview-item i {
+  color: var(--secondary-color);
+}
+
+/* ==========================================================================
+   13. Repair Status Section
+   ========================================================================== */
+
+.status-section {
+  padding: 5rem 0;
+  background-color: #ffffff;
+}
+
+.status-box {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.status-box .form-group {
+  margin-bottom: 0;
+}
+
+.status-result-container {
+  width: 100%;
+}
+
+.status-card {
+  padding: 1.5rem;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-left: 4px solid var(--secondary-color);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-light);
+}
+
+.status-card h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+}
+
+.status-card p {
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.status-card p:last-child {
+  margin-bottom: 0;
+}
+
+.badge-status-in-progress {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  background-color: rgba(245, 158, 11, 0.15);
+  color: #b45309;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   14. Footer
+   ========================================================================== */
+
+.footer {
+  background-color: var(--primary-color);
+  color: #94a3b8;
+  padding: 1.5rem 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+}
+
+.footer i {
+  color: var(--secondary-color);
+  margin-right: 0.35rem;
+}
+
+/* ==========================================================================
+   15. Logo / Brand
+   ========================================================================== */
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.hero-card {
+  width: 100%;
+}
+
+/* Keep inline hidden wizard steps hidden */
+.wizard-step-content[style*="display:none"] {
+  display: none !important;
+}
+
+/* ==========================================================================
+   16. Responsive Improvements
+   ========================================================================== */
+
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-proof {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .nav-container {
+    padding: 0.65rem 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.5rem 1rem 1rem;
+    background-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
+  }
+
+  .nav-links.active .nav-link {
+    padding: 0.75rem 0;
+  }
+
+  .nav-actions .btn {
+    display: none;
+  }
+
+  .hero-section {
+    padding: 3rem 0;
+  }
+
+  .hero-text h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .quick-quote-box {
+    padding: 1.5rem;
+  }
+
+  .pillars-section,
+  .services-section,
+  .inquiry-section,
+  .status-section {
+    padding: 3.5rem 0;
+  }
+
+  .section-title {
+    margin-bottom: 2rem;
+  }
+
+  .section-title h2 {
+    font-size: 1.65rem;
+  }
+
+  .wizard-form-box {
+    padding: 1.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .status-box {
+    padding: 1.25rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
